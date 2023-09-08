@@ -1,0 +1,13 @@
+services:
+  eureka-server:
+    build: .
+    container_name: eureka-server
+    ports:
+      - '8761:8761'
+    networks:
+      - ms-network
+
+networks:
+  ms-network:
+    external: true
+    name: ms-network
